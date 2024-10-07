@@ -12,7 +12,7 @@ app.use(express.json());
 // Use CORS middleware
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow the React app
+    origin: ["http://localhost:5173", "https://spotitube.netlify.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
