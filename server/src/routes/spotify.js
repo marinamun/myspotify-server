@@ -31,6 +31,9 @@ async function fetchAccessToken() {
     console.error("Error fetching access token:", error);
   }
 }
+// to fetch token immediately on server start
+setInterval(fetchAccessToken, 1000 * 60 * 30); 
+fetchAccessToken(); 
 
 // Middleware to ensure valid token
 async function ensureValidToken(req, res, next) {
